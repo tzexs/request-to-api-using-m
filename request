@@ -1,0 +1,16 @@
+(page as number) =>
+    let
+        request = Json.Document(
+            Web.Contents(
+                "linkofsource", //source of endpoint
+                [
+                    RelativePath = "restOfLinkOfPath", //path of endpoint
+                    Headers = getHeaders(),
+                    Content = getBody(page)
+                ]
+            )
+            ,
+            1252
+        )
+    in
+        request
