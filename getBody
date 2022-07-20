@@ -1,0 +1,18 @@
+(page as number) => 
+    let
+        body = Json.FromValue([
+                call = "CallName",
+                app_key = #"app_key",
+                app_secret = #"app_secret",
+                param = {
+                    [
+                        pagina = page,
+                        registros_por_pagina =  50,
+                        //insert parameters content
+                        
+                              
+                    ]
+                }
+            ])
+    in 
+        body
