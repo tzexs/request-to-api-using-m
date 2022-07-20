@@ -1,0 +1,9 @@
+let
+    totalPages = request(1)[number_of_pages],  //number_of_pages is the index of pages, it can change depending on the API
+    listOfPages = List.Generate(
+        () => [page = 1, data = request(1)],
+        each [page] <= totalPages,
+        each [page = [page] + 1, data = request([page] +1 )]
+       
+in
+  listOfPages
